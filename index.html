@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body
+    class="h-screen w-screen bg-[#15193a] overflow-hidden"
+    style="font-family: 'Ubuntu', serif"
+  >
+    <div class="main h-full w-full flex flex-col items-center">
+      <!-- Scoreboard -->
+      <div class="lg:w-[55%] lg:h-[25%] py-4 px-4 w-full">
+        <div
+          class="score-board h-full w-full border-[3px] border-gray-400 rounded-md text-white px-4 flex justify-between items-center"
+        >
+          <div class="left">
+            <h1 class="font-bold text-3xl lg:text-4xl">ROCK</h1>
+            <h1 class="font-bold text-3xl lg:text-4xl">PAPER</h1>
+            <h1 class="font-bold text-3xl lg:text-4xl">SCISSORS</h1>
+          </div>
+          <div
+            class="right lg:h-[80%] lg:w-[20%] w-[35%] bg-white rounded-md flex flex-col justify-evenly items-center"
+          >
+            <p class="text-blue-400 font-bold">SCORE</p>
+            <h1 class="text-[#15193a] text-6xl font-bold score">0</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Options -->
+      <div class="lg:w-[55%] w-full h-[70%] lg:p-4 p-2 py-20 game-board">
+        <div class="h-[50%] w-[100%] flex justify-evenly">
+          <div
+            class="w-[23vh] h-[23vh] bg-[url('paper.webp')] bg-cover rounded-full border-[18px] border-[#de3b58] shadow paper options transition-transform transform hover:scale-120"
+          ></div>
+          <div
+            class="h-[23vh] w-[23vh] bg-[url('scissors.webp')] bg-cover rounded-full border-[18px] border-[#eca916] shadow scissors options"
+          ></div>
+        </div>
+        <div class="h-[50%] w-[100%] flex justify-center">
+          <div
+            class="h-[23vh] w-[23vh] bg-[url('rock.webp')] bg-cover rounded-full border-[18px] border-[#5672f4] shadow rock options"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Additional Options -->
+      <div
+        class="lg:h-[70%] h-[50%] lg:w-[90%] w-full flex justify-evenly items-center hidden result"
+      >
+        <div
+          class="w-[50%] lg:h-full h-[70%] flex flex-col items-center justify-evenly"
+        >
+          <h3 class="font-bold text-3xl lg:text-4xl text-white">YOU</h3>
+          <div
+            class="lg:h-[32vh] lg:w-[32vh] h-[21vh] w-[21vh] bg-cover rounded-full border-[18px] shadow scissors"
+          ></div>
+        </div>
+        <div
+          class="w-[50%] lg:h-full h-[70%] flex flex-col items-center justify-evenly"
+        >
+          <h3 class="font-bold text-3xl lg:text-4xl text-white">OPPONENT</h3>
+          <div
+            class="lg:h-[32vh] lg:w-[32vh] h-[21vh] w-[21vh] bg-cover rounded-full border-[18px] shadow scissors"
+          ></div>
+        </div>
+        
+        </div>
+        <div class="h-[30%] lg:w-[40%] w-full  flex flex-col items-center justify-center gap-8 absolute lg:bottom-[18%] bottom-[3%] msg-container hidden ">
+          <h1 class="text-white lg:text-6xl text-5xl font-bold text-center msg"></h1>
+          <div
+            class="right h-[40%] lg:w-[50%] w-[70%] bg-white rounded-md flex flex-col justify-evenly items-center"
+          >
+          <h1 class="text-[#15193a] lg:text-5xl text-4xl font-bold text-center play-again">PLAY AGAIN</h1>
+          </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
